@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marigold</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js"></script>
+</head>
+
+<body>
+    <img src="img/marigold.png" id="BG_Img">
+    <img src="img/ESC배경.png" id="ESC_Img">
+    <audio autoplay id="_Game_Audio">
+        <source src="audio/M2U - Marigold (lyrics) (320 kbps).mp3">
+    </audio>
+    <div id="_Scoreboard">
+        <h1 id="_perfect">Perfect :</h1>
+        <h1 id=_late>Late :</h1>
+        <h1 id="_fast">Fast :</h1>
+        <h1 id="_miss">Miss :</h1>
+        <h1 id="_rate">Rate :</h1>
+        <h1 id="_score">Score : </h1>
+        <h1 id="_rank"></h1>
+    </div>
+    <div id="_All">
+        <div id="Div_Game_Bt">
+            <h1 id="_pause">PAUSED</h1>
+            <div class="content">
+                <button type="button" onclick="PausePlay(), _ReceiveData()" id="Play_Bt"
+                    class="Game_Bt block">play</button>
+                <button type="button" id="Retry_Bt" class="Game_Bt block" onclick="retry()">Retry</button>
+                <button type="button" onclick="go_Main()" class="Game_Bt block" id="Back_Bt">메인화면</button>
+            </div>
+        </div>
+        <h2 id="combo" class="rate"></h2>
+        <h1 id="rate" class="rate"></h1>
+        <h3 id="aveRate" class="rate"></h3>
+        <div id="line">
+            <table id="_1key" border="1" class="_key">
+                <tr id="_1-1" style="background-color: whitesmoke;">
+                    <td></td>
+                </tr>
+                <tr id="_1-2">
+                    <td></td>
+                </tr>
+                <tr id="_1-3">
+                    <td></td>
+                </tr>
+                <tr id="_1-4">
+                    <td></td>
+                </tr>
+                <tr id="_1-5">
+                    <td></td>
+                </tr>
+                <tr id="_1-6">
+                    <td></td>
+                </tr>
+                <tr id="_1-7">
+                    <td></td>
+                </tr>
+                <tr id="_1-8">
+                    <td></td>
+                </tr>
+                <tr id="_1-9">
+                    <td></td>
+                </tr>
+                <tr id="_1-10">
+                    <td></td>
+                </tr>
+                <tr id="_1-11">
+                    <td></td>
+                </tr>
+                <tr id="_1-12">
+                    <td></td>
+                </tr>
+                <tr id="_1-13">
+                    <td></td>
+                </tr>
+                <tr id="_1-14">
+                    <td></td>
+                </tr>
+                <tr id="_1-15">
+                    <td></td>
+                </tr>
+                <tr id="_1-16">
+                    <td></td>
+                </tr>
+                <tr id="_1-17">
+                    <td></td>
+                </tr>
+                <tr id="_1-18">
+                    <td></td>
+                </tr>
+                <tr id="_1-19">
+                    <td></td>
+                </tr>
+                <tr id="_1-20">
+                    <td></td>
+                </tr>
+                <tr id="_1-21">
+                    <td></td>
+                </tr>
+                <tr id="_1-22">
+                    <td></td>
+                </tr>
+                <tr id="_1-23" class="_23">
+                    <td></td>
+                </tr>
+                <tr id="_1-24">
+                    <td></td>
+                </tr>
+                <tr id="_1-25">
+                    <td></td>
+                </tr>
+                <tr id="_1-26">
+                    <td></td>
+                </tr>
+                <tr id="_1-27">
+                    <td></td>
+                </tr>
+                <tr id="_1-28">
+                    <td></td>
+                </tr>
+                <tr id="_1-29">
+                    <td></td>
+                </tr>
+                <tr id="_1-30">
+                    <td></td>
+                </tr>
+            </table>
+            <table id="_2key" border="1" class="_key">
+                <tr id="_2-1" style="background-color: whitesmoke;">
+                    <td></td>
+                </tr>
+                <tr id="_2-2">
+                    <td></td>
+                </tr>
+                <tr id="_2-3">
+                    <td></td>
+                </tr>
+                <tr id="_2-4">
+                    <td></td>
+                </tr>
+                <tr id="_2-5">
+                    <td></td>
+                </tr>
+                <tr id="_2-6">
+                    <td></td>
+                </tr>
+                <tr id="_2-7">
+                    <td></td>
+                </tr>
+                <tr id="_2-8">
+                    <td></td>
+                </tr>
+                <tr id="_2-9">
+                    <td></td>
+                </tr>
+                <tr id="_2-10">
+                    <td></td>
+                </tr>
+                <tr id="_2-11">
+                    <td></td>
+                </tr>
+                <tr id="_2-12">
+                    <td></td>
+                </tr>
+                <tr id="_2-13">
+                    <td></td>
+                </tr>
+                <tr id="_2-14">
+                    <td></td>
+                </tr>
+                <tr id="_2-15">
+                    <td></td>
+                </tr>
+                <tr id="_2-16">
+                    <td></td>
+                </tr>
+                <tr id="_2-17">
+                    <td></td>
+                </tr>
+                <tr id="_2-18">
+                    <td></td>
+                </tr>
+                <tr id="_2-19">
+                    <td></td>
+                </tr>
+                <tr id="_2-20">
+                    <td></td>
+                </tr>
+                <tr id="_2-21">
+                    <td></td>
+                </tr>
+                <tr id="_2-22">
+                    <td></td>
+                </tr>
+                <tr id="_2-23" class="_23">
+                    <td></td>
+                </tr>
+                <tr id="_2-24">
+                    <td></td>
+                </tr>
+                <tr id="_2-25">
+                    <td></td>
+                </tr>
+                <tr id="_2-26">
+                    <td></td>
+                </tr>
+                <tr id="_2-27">
+                    <td></td>
+                </tr>
+                <tr id="_2-28">
+                    <td></td>
+                </tr>
+                <tr id="_2-29">
+                    <td></td>
+                </tr>
+                <tr id="_2-30">
+                    <td></td>
+                </tr>
+            </table>
+            <table id="_3key" border="1" class="_key">
+                <tr id="_3-1" style="background-color: whitesmoke;">
+                    <td></td>
+                </tr>
+                <tr id="_3-2">
+                    <td></td>
+                </tr>
+                <tr id="_3-3">
+                    <td></td>
+                </tr>
+                <tr id="_3-4">
+                    <td></td>
+                </tr>
+                <tr id="_3-5">
+                    <td></td>
+                </tr>
+                <tr id="_3-6">
+                    <td></td>
+                </tr>
+                <tr id="_3-7">
+                    <td></td>
+                </tr>
+                <tr id="_3-8">
+                    <td></td>
+                </tr>
+                <tr id="_3-9">
+                    <td></td>
+                </tr>
+                <tr id="_3-10">
+                    <td></td>
+                </tr>
+                <tr id="_3-11">
+                    <td></td>
+                </tr>
+                <tr id="_3-12">
+                    <td></td>
+                </tr>
+                <tr id="_3-13">
+                    <td></td>
+                </tr>
+                <tr id="_3-14">
+                    <td></td>
+                </tr>
+                <tr id="_3-15">
+                    <td></td>
+                </tr>
+                <tr id="_3-16">
+                    <td></td>
+                </tr>
+                <tr id="_3-17">
+                    <td></td>
+                </tr>
+                <tr id="_3-18">
+                    <td></td>
+                </tr>
+                <tr id="_3-19">
+                    <td></td>
+                </tr>
+                <tr id="_3-20">
+                    <td></td>
+                </tr>
+                <tr id="_3-21">
+                    <td></td>
+                </tr>
+                <tr id="_3-22">
+                    <td></td>
+                </tr>
+                <tr id="_3-23" class="_23">
+                    <td></td>
+                </tr>
+                <tr id="_3-24">
+                    <td></td>
+                </tr>
+                <tr id="_3-25">
+                    <td></td>
+                </tr>
+                <tr id="_3-26">
+                    <td></td>
+                </tr>
+                <tr id="_3-27">
+                    <td></td>
+                </tr>
+                <tr id="_3-28">
+                    <td></td>
+                </tr>
+                <tr id="_3-29">
+                    <td></td>
+                </tr>
+                <tr id="_3-30">
+                    <td></td>
+                </tr>
+            </table>
+            <table id="_4key" border="1" class="_key">
+                <tr id="_4-1" style="background-color: whitesmoke;">
+                    <td></td>
+                </tr>
+                <tr id="_4-2">
+                    <td></td>
+                </tr>
+                <tr id="_4-3">
+                    <td></td>
+                </tr>
+                <tr id="_4-4">
+                    <td></td>
+                </tr>
+                <tr id="_4-5">
+                    <td></td>
+                </tr>
+                <tr id="_4-6">
+                    <td></td>
+                </tr>
+                <tr id="_4-7">
+                    <td></td>
+                </tr>
+                <tr id="_4-8">
+                    <td></td>
+                </tr>
+                <tr id="_4-9">
+                    <td></td>
+                </tr>
+                <tr id="_4-10">
+                    <td></td>
+                </tr>
+                <tr id="_4-11">
+                    <td></td>
+                </tr>
+                <tr id="_4-12">
+                    <td></td>
+                </tr>
+                <tr id="_4-13">
+                    <td></td>
+                </tr>
+                <tr id="_4-14">
+                    <td></td>
+                </tr>
+                <tr id="_4-15">
+                    <td></td>
+                </tr>
+                <tr id="_4-16">
+                    <td></td>
+                </tr>
+                <tr id="_4-17">
+                    <td></td>
+                </tr>
+                <tr id="_4-18">
+                    <td></td>
+                </tr>
+                <tr id="_4-19">
+                    <td></td>
+                </tr>
+                <tr id="_4-20">
+                    <td></td>
+                </tr>
+                <tr id="_4-21">
+                    <td></td>
+                </tr>
+                <tr id="_4-22">
+                    <td></td>
+                </tr>
+                <tr id="_4-23" class="_23">
+                    <td></td>
+                </tr>
+                <tr id="_4-24">
+                    <td></td>
+                </tr>
+                <tr id="_4-25">
+                    <td></td>
+                </tr>
+                <tr id="_4-26">
+                    <td></td>
+                </tr>
+                <tr id="_4-27">
+                    <td></td>
+                </tr>
+                <tr id="_4-28">
+                    <td></td>
+                </tr>
+                <tr id="_4-29">
+                    <td></td>
+                </tr>
+                <tr id="_4-30">
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

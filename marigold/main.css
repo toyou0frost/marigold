@@ -1,0 +1,120 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.Main_Bt{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+#Set_Bt{
+    display: flex;
+    justify-content: center;
+    border:  0px;
+}
+
+input{
+    width: 120px;
+    height: 50px;
+    background-color: whitesmoke;
+}
+
+#Set_Table{
+    display: flex;
+    justify-content: center;
+}
+table{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    width: 480px;
+    height: 750px;
+    float: left;
+}    
+tr, td{
+    box-sizing: border-box;
+    width: 400px;
+    border: 0px;
+}
+
+._Main_Bt {
+  background-color: #c47135;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+._Main_Bt:before,
+._Main_Bt:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+._Main_Bt:before {
+  border-color: #c47135;
+  border-right-width: 2px;
+  border-top-width: 2px;
+  right: -5px;
+  top: -5px;
+}
+._Main_Bt:after {
+  border-bottom-width: 2px;
+  border-color: #c47135;
+  border-left-width: 2px;
+  bottom: -5px;
+  left: -5px;
+}
+._Main_Bt:hover{
+  background-color: #c47135;
+}
+._Main_Bt:hover:before,
+._Main_Bt:hover:after{
+  height: 100%;
+  width: 100%;
+}
+
+#_Back {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#_Back {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+#_Back:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}

@@ -1,0 +1,149 @@
+#BG_Img, #ESC_Img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#ESC_Img{
+    visibility: hidden;
+}
+#_All {
+  position: fixed;
+  width: 100%;
+}
+#line {
+  padding: 50px 100px;
+}
+table {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  border-collapse: collapse;
+  width: 120px;
+  height: 750px;
+  float: left;
+}
+#_1key {
+  position: absolute;
+  left: 40px;
+  top: 50px;
+}
+#_2key {
+  position: absolute;
+  left: 160px;
+  top: 50px;
+}
+#_3key {
+  position: absolute;
+  left: 280px;
+  top: 50px;
+}
+#_4key {
+  position: absolute;
+  left: 400px;
+  top: 50px;
+}
+#rate {
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: 225px;
+  top: 450px;
+}
+#aveRate{
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: 255px;
+  top: 500px;
+}
+#combo{
+  font-size: 45px;
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: 245px;
+  top: 150px;
+  text-align: center;
+}
+tr,
+td {
+  box-sizing: border-box;
+  width: 100px;
+  border: 0px;
+}
+
+._23 {
+  background-color: black;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 700px;
+}
+.Game_Bt {
+  margin: 50px;
+  padding: 15px 25px;
+  color: white;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+}
+#Play_Bt {
+  left: 35%;
+  top: 50%;
+}
+#Retry_Bt {
+  left: 35%;
+  top: 120%;
+}
+#Back_Bt {
+  left: 35%;
+  top: 190%;
+}
+.Game_Bt[class*="btn"] {
+  text-decoration: none;
+}
+.Game_Bt.block {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #4a4a4a;
+}
+.Game_Bt.block:active {
+  background-color: #363636;
+}
+
+#_pause{
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    visibility: hidden;
+}
+
+#_Scoreboard{
+  position: relative;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  width: 29%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: goldenrod;
+  padding: 10px;
+  visibility: hidden;
+}
+#_rank{
+  font-size: 300px;
+  margin: 0px;
+  color: wheat;
+}
+#_perfect, #_late, #_fast, #_miss, #_rate, #_score{
+  margin: 0px;
+  color: wheat;
+}
